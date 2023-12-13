@@ -14,8 +14,9 @@ unsigned long Fibonachi(int* memory_mass,int num) {
         return 1;
     }
     else {
-        return Fibonachi(memory_mass, num - 2) + Fibonachi(memory_mass, num - 1);
         memory_mass[num - 1] = Fibonachi(memory_mass, num - 2) + Fibonachi(memory_mass, num - 1);
+        return Fibonachi(memory_mass, num - 2) + Fibonachi(memory_mass, num - 1);
+        
     }
 }
 
